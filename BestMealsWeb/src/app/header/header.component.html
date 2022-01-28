@@ -1,0 +1,24 @@
+<mat-toolbar color="primary">
+  <button mat-button [matMenuTriggerFor]="restaurantMenu">Restaurantes</button>
+  <mat-menu #restaurantMenu="matMenu" yPosition="above">
+    <button mat-menu-item>Cadastrar</button>
+    <button mat-menu-item>Consultar</button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="mealMenu">Refeições</button>
+  <mat-menu #mealMenu="matMenu" yPosition="below">
+    <button mat-menu-item>Cadastrar</button>
+    <button mat-menu-item>Consultar</button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="restaurantEvaluationMenu">Avaliações de Restaurantes</button>
+  <mat-menu #restaurantEvaluationMenu="matMenu" xPosition="before">
+    <button mat-menu-item>Avaliar Restaurant</button>
+  </mat-menu>
+
+
+  <button mat-button [matMenuTriggerFor]="mealEvaluationMenu">Avaliação de Refeições</button>
+  <mat-menu #mealEvaluationMenu="matMenu" xPosition="after">
+    <button mat-menu-item>Avaliar Refeição</button>
+  </mat-menu>
+</mat-toolbar>
