@@ -13,11 +13,16 @@ import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { AppRoutingModule } from './app-routing.module';
+import { RestaurantComponent } from './restaurant/restaurant.component';
+import { MealComponent } from './meal/meal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    RestaurantComponent,
+    MealComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +35,8 @@ import { HeaderComponent } from './header/header.component';
     MatExpansionModule,
     HttpClientModule,
     MatMenuModule,
-    MatDialogModule
+    MatDialogModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
