@@ -16,13 +16,15 @@ import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RestaurantComponent } from './restaurant/restaurant.component';
 import { MealComponent } from './meal/meal.component';
+import { AddRestaurantComponent } from './restaurant/add-restaurant/add-restaurant.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     RestaurantComponent,
-    MealComponent
+    MealComponent,
+    AddRestaurantComponent
   ],
   imports: [
     BrowserModule,
