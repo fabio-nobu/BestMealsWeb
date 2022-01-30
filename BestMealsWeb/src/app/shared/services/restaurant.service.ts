@@ -61,7 +61,7 @@ export class RestaurantService {
         meals: [],
         evaluations: []
       };
-      this.http.post<{message: string, restaurantId: string}>(this.apiUrl, restaurant)
+      this.http.post<{message: string, restaurantId: string}>(this.apiUrl, restaurant )
         .subscribe((responseData) => {
           this.router.navigate(["/restaurants"]);
         })

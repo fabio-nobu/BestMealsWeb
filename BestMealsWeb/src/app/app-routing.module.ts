@@ -7,7 +7,7 @@ import { EditRestaurantComponent } from './restaurant/edit-restaurant/edit-resta
 
 const routes: Routes = [
   { path: 'restaurants', component: RestaurantComponent },
-  { path: 'meals', component: MealComponent },
+  { path: 'meals', component: MealComponent},
 ]
 
 @NgModule({

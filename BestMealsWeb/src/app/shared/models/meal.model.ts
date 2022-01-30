@@ -1,4 +1,4 @@
-import { MealEvaluation } from "./mealEvaluation.model";
+import { MealEvaluation } from "./mealEvaluation.model" ;
 
 export interface Meal {
   id: string;
