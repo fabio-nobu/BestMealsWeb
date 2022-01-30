@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
+import { RestaurantService } from 'src/app/shared/services/restaurant.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-add-restaurant',
@@ -8,10 +9,9 @@ import { MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./add-restaurant.component.css']
 })
 export class AddRestaurantComponent implements OnInit {
-  public addRestaurantForm: FormGroup;
 
   constructor(
-    private fb: FormBuilder,
+    public restaurantService: RestaurantService,
     public dialogRef: MatDialogRef<AddRestaurantComponent>
   ) { }
 
@@ -19,9 +19,18 @@ export class AddRestaurantComponent implements OnInit {
     this.dialogRef.close();
   }
 
-  ngOnInit(): void {
-      this.addRestaurantForm = this.fb.group({
+  addRestaurant(form: NgForm) {
+    if (form.invalid) {
+      return;
+    }
 
-      })
+    this.restaurantService.addRestaurant(form.value.name, form.value.address, form.value.city, form.value.state, form.value.zipCode );
+    form.resetForm();
+    this.dialogRef.close();
+    window.location.reload();
+  }
+
+  ngOnInit(): void {
+
   }
 }

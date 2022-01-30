@@ -10,3 +10,7 @@
 .example-spacer {
   flex: auto;
 }
+
+table {
+  width: 100%;
+}

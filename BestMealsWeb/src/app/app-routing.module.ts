@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { RestaurantComponent } from './restaurant/restaurant.component';
 import { MealComponent } from './meal/meal.component';
+import { EditRestaurantComponent } from './restaurant/edit-restaurant/edit-restaurant.component';
 
 const routes: Routes = [
   { path: 'restaurants', component: RestaurantComponent },
-  { path: 'meals', component: MealComponent }
+  { path: 'meals', component: MealComponent },
 ]
 
 @NgModule({

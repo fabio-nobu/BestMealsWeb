@@ -1,38 +1,38 @@
-<h1 mat-dialog-title>Cadastro de Restaurante</h1>
+<h1 mat-dialog-title>Edição de Restaurante</h1>
 <div mat-dialog-content>
-  <form class="add-restaurant-form" (submit)="addRestaurant(restaurantForm)" #restaurantForm="ngForm">
+  <form class="add-restaurant-form" (submit)="onEditSave(restaurantForm)" #restaurantForm="ngForm">
     <mat-form-field class="add-restaurant-full-width">
       <mat-label>Nome do Restaurant</mat-label>
-      <input matInput type="text" name="name" ngModel required #name="ngModel">
+      <input matInput type="text" name="name" [ngModel]="restaurantData.name" required #name="ngModel">
       <mat-error *ngIf="name.invalid">Por favor, informe o nome do restaurante</mat-error>
     </mat-form-field>
 
     <mat-form-field class="add-restaurant-full-width">
       <mat-label>Endereço</mat-label>
-      <input matInput type="text" name="address" ngModel required #address="ngModel">
+      <input matInput type="text" name="address" [ngModel]="restaurantData.address" required #address="ngModel">
       <mat-error *ngIf="address.invalid">Por favor, informe o endereço do restaurante</mat-error>
     </mat-form-field>
 
     <mat-form-field class="add-restaurant-three">
       <mat-label>Cidade</mat-label>
-      <input matInput type="text" name="city" ngModel required #city="ngModel">
+      <input matInput type="text" name="city" [ngModel]="restaurantData.city" required #city="ngModel">
       <mat-error *ngIf="name.invalid">Por favor, informe a cidade do restaurante</mat-error>
     </mat-form-field>
 
     <mat-form-field class="add-restaurant-quarter">
       <mat-label>Estado</mat-label>
-      <input matInput type="text" name="state" ngModel required #state="ngModel">
+      <input matInput type="text" name="state" [ngModel]="restaurantData.state" required #state="ngModel">
       <mat-error *ngIf="name.invalid">Por favor, informe o estado do restaurante</mat-error>
     </mat-form-field>
 
     <mat-form-field class="add-restaurant-full-width">
       <mat-label>CEP</mat-label>
-      <input matInput type="text" name="zipCode" ngModel required #zipCode="ngModel">
+      <input matInput type="text" name="zipCode" [ngModel]="restaurantData.zipCode" required #zipCode="ngModel">
       <mat-error *ngIf="name.invalid">Por favor, informe CEP do restaurante</mat-error>
     </mat-form-field>
 
     <div mat-dialog-actions>
-      <button mat-raised-button color="primary" type="submit">Cadastrar</button>
+      <button mat-raised-button color="primary" type="submit">Alterar</button>
       <button mat-button (click)="cancel()" color="warn">Cancelar</button>
     </div>
 
