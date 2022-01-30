@@ -1,5 +1,5 @@
 export interface RestaurantEvaluation {
   id: string;
-  evaluation: number;
+  evaluation: number ;
   comment: string;
 }

@@ -20,7 +20,7 @@ export class EditRestaurantComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public restaurantData: any
   ) { }
 
-  onEditSave(form: NgForm){
+  onEditSave(form: NgForm)  {
     if (form.invalid) {
       return;
     }
