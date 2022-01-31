@@ -1,3 +1,8 @@
+/*
+* @author: Fabio Nobuyoshi Moriya Yusuki
+* @description:
+*/
+
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog' ;
 import { RestaurantService } from 'src/app/shared/services/restaurant.service';

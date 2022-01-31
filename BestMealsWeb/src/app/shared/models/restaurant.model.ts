@@ -1,3 +1,8 @@
+/*
+* @author: Fabio Nobuyoshi Moriya Yusuki
+* @description: interface responsável pelo modelo de restaurante
+*/
+
 import { Meal } from "./meal.model" ;
 import { RestaurantEvaluation } from "./restaurantEvaluation.models";
 
