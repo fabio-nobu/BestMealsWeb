@@ -1,4 +1,11 @@
+<!--
+- @author: Fabio Nobuyoshi Moriya Yusuki
+- @description: página principal dos restaurantes. Por padrão, exibe a tabela com todos os restaurantes onde é possivel também
+- acessar o cadastro, edição e deleção dos restaurantes.
+-->
+
 <div class="container">
+  <!-- Toolbar do Angular Material com um botão que abre um dialog para o cadastro de um novo restaurante  -->
   <mat-toolbar color="accent">
     <span>Restaurantes</span>
     <span class="example-spacer"></span>
@@ -7,6 +14,7 @@
     </button>
   </mat-toolbar>
 
+  <!-- Tabela do Angular Material de todos os restaurantes cadastrados -->
   <table mat-table [dataSource]="restaurants" class="mat-elevation-z8">
     <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef>Nome </th>
@@ -33,6 +41,7 @@
       <td mat-cell *matCellDef="let restaurant">{{ restaurant.zipCode }}</td>
     </ng-container>
 
+    <!-- Botões para edição e deleção do restaurante selecionado -->
     <ng-container matColumnDef="actions">
       <th mat-header-cell *matHeaderCellDef>Actions</th>
       <td mat-cell *matCellDef="let restaurant">
@@ -41,6 +50,7 @@
       </td>
     </ng-container>
 
+    <!-- Header responsavel em exibir as colunas configuradas no typescript -->
     <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
     <tr mat-row *matRowDef="let restaurant; columns: columnsToDisplay"></tr>
   </table>

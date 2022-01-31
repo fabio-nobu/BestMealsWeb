@@ -1,3 +1,7 @@
+/*
+* @author: Fabio Nobuyoshi Moriya Yusuki
+* @description: Componente de cadastro de restaurante
+*/
 import { Component, OnInit } from '@angular/core' ;
 import { MatDialogRef } from '@angular/material/dialog';
 import { RestaurantService } from 'src/app/shared/services/restaurant.service';
@@ -19,6 +23,7 @@ export class AddRestaurantComponent implements OnInit {
     this.dialogRef.close();
   }
 
+  //função responsável por coletar os dados informados no NgForm e cadastrar o novo restaurante
   addRestaurant(form: NgForm) {
     if (form.invalid) {
       return;

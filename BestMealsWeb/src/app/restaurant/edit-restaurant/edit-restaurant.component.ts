@@ -1,6 +1,6 @@
 /*
 * @author: Fabio Nobuyoshi Moriya Yusuki
-* @description:
+* @description: Componente de edição de restaurante.
 */
 
 import { Component, Inject, OnInit } from '@angular/core';
@@ -19,12 +19,14 @@ export class EditRestaurantComponent implements OnInit {
 
   public restaurant: Restaurant;
 
+  //dentro do construtor esta sendo coletado os dados de restaurantes enviados pelo componente de Restaurante
   constructor(
     public restaurantService: RestaurantService,
     public dialogRef: MatDialogRef<EditRestaurantComponent>,
     @Inject(MAT_DIALOG_DATA) public restaurantData: any
   ) { }
 
+  //função responsável por receber os dados informados no NgForm e salvar as alterações
   onEditSave(form: NgForm)  {
     if (form.invalid) {
       return;
